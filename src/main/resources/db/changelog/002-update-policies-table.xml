@@ -5,8 +5,11 @@
         xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
         http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.6.xsd">
 
-    <include file="db/changelog/001-create-policies-table.xml"/>
-    <include file="db/changelog/002-update-policies-table.xml"/>
-    <include file="db/changelog/003-create-error-messages.xml"/>
-    <include file="db/changelog/004-add-audit-to-error-messages.xml"/>
+    <changeSet id="002-1" author="omeralkan">
+        <dropColumn tableName="policies" columnName="policy_number"/>
+        <dropColumn tableName="policies" columnName="application_id"/>
+
+        <renameColumn tableName="policies" oldColumnName="premium_amount" newColumnName="amount" columnDataType="DECIMAL(15,2)"/>
+    </changeSet>
+
 </databaseChangeLog>

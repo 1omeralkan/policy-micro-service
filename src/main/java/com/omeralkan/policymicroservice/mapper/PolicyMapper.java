@@ -39,7 +39,6 @@ public class PolicyMapper {
         entity.setAmount(requestDto.getAmount());
         entity.setCurrencyCode(requestDto.getCurrencyCode().toUpperCase());
 
-        // İş Kuralı: Poliçe ilk taksit ödendiğinde oluştuğu için direkt ACTIVE olarak başlatıyoruz.
         entity.setPolicyStatus(PolicyStatus.ACTIVE);
 
         return entity;

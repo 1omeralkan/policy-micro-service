@@ -22,15 +22,13 @@ public class GlobalExceptionHandler {
 
     @ExceptionHandler(BusinessException.class)
     public ResponseEntity<ErrorResponse> handleBusinessException(BusinessException ex, HttpServletRequest request) {
-        // Postman'den veya Swagger'dan gelen dil header'ını alıyoruz
         String language = request.getHeader("Accept-Language");
 
-        // Veritabanından o dile ait mesajı çekiyoruz (Örn: POL-404)
         String dynamicMessage = errorMessageService.getMessage(ex.getMessage(), language);
 
         ErrorResponse errorResponse = new ErrorResponse(
                 ex.getMessage(),
-                dynamicMessage, // Dinamik mesajımız buraya geldi!
+                dynamicMessage,
                 null,
                 LocalDateTime.now()
         );

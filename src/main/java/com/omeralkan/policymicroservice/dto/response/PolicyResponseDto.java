@@ -2,7 +2,7 @@ package com.omeralkan.policymicroservice.dto.response;
 
 import lombok.Getter;
 import lombok.Setter;
-
+import java.util.List;
 import java.math.BigDecimal;
 import java.time.LocalDate;
 
@@ -18,5 +18,5 @@ public class PolicyResponseDto {
     private String currencyCode;
     private String policyStatus;
     private Boolean isActive;
-
+    private List<PolicyCoverageResponseDto> coverages;
 }

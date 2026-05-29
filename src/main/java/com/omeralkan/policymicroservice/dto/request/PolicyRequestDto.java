@@ -7,7 +7,7 @@ import jakarta.validation.constraints.Positive;
 import jakarta.validation.constraints.Size;
 import lombok.Getter;
 import lombok.Setter;
-
+import java.util.List;
 import java.math.BigDecimal;
 import java.time.LocalDate;
 
@@ -32,4 +32,6 @@ public class PolicyRequestDto {
 
     @NotNull(message = "Bitiş tarihi boş olamaz")
     private LocalDate endDate;
+
+    private List<PolicyCoverageRequestDto> coverages;
 }

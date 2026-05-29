@@ -9,6 +9,8 @@ import lombok.Setter;
 
 import java.math.BigDecimal;
 import java.time.LocalDate;
+import java.util.List;
+import java.util.ArrayList;
 
 @Entity
 @Table(name = "policies")
@@ -37,4 +39,8 @@ public class PolicyEntity extends BaseEntity {
     @Enumerated(EnumType.STRING)
     @Column(name = "policy_status", nullable = false, length = 20)
     private PolicyStatus policyStatus;
+
+    @Builder.Default
+    @OneToMany(mappedBy = "policy", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
+    private List<PolicyCoverageEntity> coverages = new ArrayList<>();
 }

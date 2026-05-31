@@ -1,6 +1,5 @@
 package com.omeralkan.policymicroservice.mapper;
 
-import com.omeralkan.policymicroservice.dto.request.PolicyCoverageRequestDto;
 import com.omeralkan.policymicroservice.dto.request.PolicyRequestDto;
 import com.omeralkan.policymicroservice.dto.response.PolicyCoverageResponseDto;
 import com.omeralkan.policymicroservice.dto.response.PolicyResponseDto;

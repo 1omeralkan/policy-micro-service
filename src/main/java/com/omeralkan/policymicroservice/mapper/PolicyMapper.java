@@ -20,6 +20,8 @@ public class PolicyMapper {
 
         PolicyResponseDto dto = new PolicyResponseDto();
         dto.setId(entity.getId());
+        dto.setCustomerId(entity.getCustomerId());
+        dto.setApplicationId(entity.getApplicationId());
         dto.setProductId(entity.getProductId());
         dto.setStartDate(entity.getStartDate());
         dto.setEndDate(entity.getEndDate());
@@ -43,6 +45,8 @@ public class PolicyMapper {
         }
 
         PolicyEntity entity = new PolicyEntity();
+        entity.setCustomerId(requestDto.getCustomerId());
+        entity.setApplicationId(requestDto.getApplicationId());
         entity.setProductId(requestDto.getProductId());
         entity.setStartDate(requestDto.getStartDate());
         entity.setEndDate(requestDto.getEndDate());

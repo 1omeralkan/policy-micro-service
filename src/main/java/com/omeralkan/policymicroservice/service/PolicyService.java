@@ -9,5 +9,6 @@ public interface PolicyService {
     PolicyResponseDto createPolicy(PolicyRequestDto requestDto);
     PolicyResponseDto getPolicyById(Long id);
     List<PolicyResponseDto> getAllPolicies();
+    List<PolicyResponseDto> getPoliciesByCustomerId(Long customerId);
     void deletePolicy(Long id);
 }

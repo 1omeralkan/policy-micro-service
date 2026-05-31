@@ -51,6 +51,15 @@ public class PolicyServiceImpl implements PolicyService {
     }
 
     @Override
+    public List<PolicyResponseDto> getPoliciesByCustomerId(Long customerId) {
+        log.info("Müşteriye ait poliçeler getiriliyor. Customer ID: {}", customerId);
+        return policyRepository.findAllByCustomerIdAndIsActiveTrue(customerId)
+                .stream()
+                .map(policyMapper::toResponse)
+                .toList();
+    }
+
+    @Override
     @Transactional
     public void deletePolicy(Long id) {
         PolicyEntity entity = findActivePolicyOrThrow(id);

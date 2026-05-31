@@ -21,6 +21,12 @@ import java.util.ArrayList;
 @Builder
 public class PolicyEntity extends BaseEntity {
 
+    @Column(name = "customer_id")
+    private Long customerId;
+
+    @Column(name = "application_id")
+    private Long applicationId;
+
     @Column(name = "product_id", nullable = false)
     private Long productId;
 

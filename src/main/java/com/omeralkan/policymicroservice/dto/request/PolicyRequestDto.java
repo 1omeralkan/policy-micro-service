@@ -15,6 +15,10 @@ import java.time.LocalDate;
 @Setter
 public class PolicyRequestDto {
 
+    private Long customerId;
+
+    private Long applicationId;
+
     @NotNull(message = "Ürün ID boş olamaz")
     private Long productId;
 

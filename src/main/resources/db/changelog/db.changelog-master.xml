@@ -10,4 +10,5 @@
     <include file="db/changelog/003-create-error-messages.xml"/>
     <include file="db/changelog/004-add-audit-to-error-messages.xml"/>
     <include file="db/changelog/005-create-policy-coverages.xml"/>
+    <include file="db/changelog/006-add-customer-application-to-policies.xml"/>
 </databaseChangeLog>

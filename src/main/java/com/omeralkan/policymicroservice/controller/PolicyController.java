@@ -33,6 +33,11 @@ public class PolicyController {
         return ResponseEntity.ok(policyService.getAllPolicies());
     }
 
+    @GetMapping("/customer/{customerId}")
+    public ResponseEntity<List<PolicyResponseDto>> getPoliciesByCustomerId(@PathVariable Long customerId) {
+        return ResponseEntity.ok(policyService.getPoliciesByCustomerId(customerId));
+    }
+
     @DeleteMapping("/{id}")
     public ResponseEntity<Void> deletePolicy(@PathVariable Long id) {
         policyService.deletePolicy(id);

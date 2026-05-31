@@ -13,4 +13,6 @@ public interface PolicyRepository extends JpaRepository<PolicyEntity, Long> {
     List<PolicyEntity> findAllByIsActiveTrue();
 
     Optional<PolicyEntity> findByIdAndIsActiveTrue(Long id);
+
+    List<PolicyEntity> findAllByCustomerIdAndIsActiveTrue(Long customerId);
 }

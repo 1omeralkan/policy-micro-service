@@ -11,6 +11,8 @@ import java.time.LocalDate;
 public class PolicyResponseDto {
 
     private Long id;
+    private Long customerId;
+    private Long applicationId;
     private Long productId;
     private LocalDate startDate;
     private LocalDate endDate;
